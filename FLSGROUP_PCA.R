@@ -106,7 +106,7 @@ pca<-prcomp(iris.data,center=T,scale=F)
 #eigenvectors
 pca$rotation
 
-#The multiplation step is done for us
+#The multiplication step is done for us
 head(pca$x)
 
 #Gives stdev rather than variance so need to square
