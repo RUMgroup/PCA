@@ -4,7 +4,7 @@ setwd("~/PhD/FLSRGROUP_PCA/")
 
 #Resources:
 #Nice tutorial  - http://www.cs.otago.ac.nz/cosc453/student_tutorials/principal_components.pdf
-#Nice visualistion and simple explanation https://georgemdallas.wordpress.com/2013/10/30/principal-component-analysis-4-dummies-eigenvectors-eigenvalues-and-dimension-reduction/
+#Nice visualisation and simple explanation https://georgemdallas.wordpress.com/2013/10/30/principal-component-analysis-4-dummies-eigenvectors-eigenvalues-and-dimension-reduction/
 
 #Why use it?
 #Find patterns in high dimensional space
