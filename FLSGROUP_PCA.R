@@ -1,11 +1,13 @@
 library(ggplot2)
 
+setwd("~/PhD/FLSRGROUP_PCA/")
+
 #Resources:
 #Nice tutorial  - http://www.cs.otago.ac.nz/cosc453/student_tutorials/principal_components.pdf
 #Nice visualistion and simple explanation https://georgemdallas.wordpress.com/2013/10/30/principal-component-analysis-4-dummies-eigenvectors-eigenvalues-and-dimension-reduction/
 
 #Why use it?
-#find patterns in high dimensional space
+#Find patterns in high dimensional space
 #Reduce the dataset to the components that explain the most variation
 #Identify number of variables in a system
 
@@ -24,6 +26,7 @@ Gene2 <- c(-4,-3,4,-5,-1,-1,-2,2,1,0,3,2,3,-4,2,-1,2,-1,4,-2,6,-2,-1,-2,-1,-1,-3
 df <- data.frame(cbind(Gene1, Gene2))
 g <- ggplot(data = df, mapping = aes(x = Gene1, y = Gene2))
 g <- g + geom_point() 
+g
 
 #calculate pca # ignore how for time being
 pca<-eigen(cov(df))
@@ -35,7 +38,7 @@ pca$slopes[1] <- pca$vectors[1,1]/pca$vectors[2,1]
 pca$slopes[2] <- pca$vectors[1,1]/pca$vectors[1,2]
 g <- g + geom_abline(intercept = 0, slope = pca$slopes[1], colour = "green")
 g <- g + geom_abline(intercept = 0, slope = pca$slopes[2], colour = "red")
-
+g
 #####################
 #PCA is performed by computing eigenvectors of the covariance matrix
 #What is an eigenvalue?
@@ -94,6 +97,8 @@ colnames(plotData)[6:8]<-c("PC1","PC2","PC3")
 g <- ggplot(data = plotData, mapping = aes(x = PC1, y = PC2))+geom_point(aes(color=Species,size=3))+scale_size_identity(guide=FALSE)
 g
 
+#The eigenvalues give the variance explained by each PC
+vars<-iris.pca$values/sum(iris.pca$values)*100
 
 #R has a built in base function
 pca<-prcomp(iris.data,center=T,scale=F)
@@ -101,7 +106,14 @@ pca<-prcomp(iris.data,center=T,scale=F)
 #eigenvectors
 pca$rotation
 
-#######
+#The multiplation step is done for us
+head(pca$x)
+
+#Gives stdev rather than variance so need to square
+vars2<-pca$sdev^2/sum(pca$sdev^2)*100
+
+
+#####################
 #Data reconstruction
 
 #Let's try reconstructing visual data from pca to demonstrate dimension reduction (compression)
@@ -170,6 +182,7 @@ image(1:96, 1:96, face, col=gray((0:255)/255))
 #Recent refutation study
 #http://f1000r.es/5ez
 
+#For the mouse genes data the data been mapped to human genes by orthologs.
 #load the FPKM values and the sample info from the refutation study
 Stanford_datasets <- read.delim("~/PhD/Stanford_datasets.txt", header=F)
 Stanford_datasets_fpkmMat <- read.delim("~/PhD/Stanford_datasets_fpkmMat.txt", header=F)
