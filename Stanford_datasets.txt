@@ -1,0 +1,26 @@
+adipose (h)	D87PMJN1:253:D2GUAACXX:8	human	adipose
+adrenal (h)	D87PMJN1:253:D2GUAACXX:8	human	adrenal
+brain (h)	HWI-ST373:375:C3172ACXX:7	human	brain
+sigmoid (h)	D87PMJN1:253:D2GUAACXX:8	human	sigmoid
+heart (h)	D87PMJN1:253:D2GUAACXX:7	human	heart
+kidney (h)	D87PMJN1:253:D2GUAACXX:7	human	kidney
+liver (h)	D87PMJN1:253:D2GUAACXX:7	human	liver
+lung (h)	D87PMJN1:253:D2GUAACXX:8	human	lung
+ovary (h)	D87PMJN1:253:D2GUAACXX:8	human	ovary
+pancreas (h)	HWI-ST373:375:C3172ACXX:7	human	pancreas
+spleen (h)	D87PMJN1:253:D2GUAACXX:7	human	spleen
+small bowel (h)	D87PMJN1:253:D2GUAACXX:7	human	small_bowel
+testis (h)	D87PMJN1:253:D2GUAACXX:7	human	testis
+adipose (m)	D4LHBFN1:276:C2HKJACXX:4	mouse	adipose
+adrenal (m)	D4LHBFN1:276:C2HKJACXX:4	mouse	adrenal
+brain (m)	HWI-ST373:375:C3172ACXX:7	mouse	brain
+sigmoid (m)	D4LHBFN1:276:C2HKJACXX:4	mouse	sigmoid
+heart (m)	MONK:312:C2GR3ACXX:6	mouse	heart
+kidney (m)	MONK:312:C2GR3ACXX:6	mouse	kidney
+liver (m)	MONK:312:C2GR3ACXX:6	mouse	liver
+lung (m)	D4LHBFN1:276:C2HKJACXX:4	mouse	lung
+ovary (m)	D4LHBFN1:276:C2HKJACXX:4	mouse	ovary
+pancreas (m)	D4LHBFN1:276:C2HKJACXX:4	mouse	pancreas
+spleen (m)	HWI-ST373:375:C3172ACXX:7	mouse	spleen
+small bowel (m)	MONK:312:C2GR3ACXX:6	mouse	small_bowel
+testis (m)	MONK:312:C2GR3ACXX:6	mouse	testis
